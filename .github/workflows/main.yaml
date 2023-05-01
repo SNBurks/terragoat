@@ -1,9 +1,9 @@
 name: My Checkov Demo Workflow version1 
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - master
 
 jobs:
   checkov:
@@ -14,7 +14,6 @@ jobs:
       - name: Install Checkov
         run: curl -L https://github.com/bridgecrewio/checkov/releases/latest/download/checkov-linux-arm64 -o checkov && chmod +x checkov
       - name: Run Checkov scan
-        run: ./checkov -d . -c .checkov.yaml -t Dockerfile
-
+        run: ./checkov -d terraform/
       - name: Checkov GitHub Action
         uses: bridgecrewio/checkov-action@v12.1347.0
