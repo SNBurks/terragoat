@@ -12,7 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install Checkov
-        run: curl -L https://github.com/bridgecrewio/checkov/releases/latest/download/checkov-linux-arm64 -o checkov && chmod +x checkov && pwd && which checkov 
+        #run: curl -L https://github.com/bridgecrewio/checkov/releases/latest/download/checkov-linux-arm64 -o checkov && chmod +x checkov && pwd && which checkov 
+        run: pip install -U checkov 
       - name: Run Checkov scan
         run: checkov -d terraform/
       - name: Checkov GitHub Action
