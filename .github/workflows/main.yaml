@@ -17,4 +17,7 @@ jobs:
       - name: Run Checkov scan
         run: checkov -d terraform/aws/ --soft-fail
       - name: Checkov GitHub Action
-        uses: bridgecrewio/checkov-action@v12.1347.0
+        uses: bridgecrewio/checkov-action@master
+
+
+        
