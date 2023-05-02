@@ -16,7 +16,7 @@ jobs:
         run: pip install -U checkov 
       - name: Run Checkov scan
         uses: bridgecrewio/checkov-action@master
-      - with: 
+        with: 
           soft_fail: true 
 
 
