@@ -9,6 +9,10 @@ jobs:
   checkov:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files
+        run: |
+          pwd
+          ls
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install Checkov
