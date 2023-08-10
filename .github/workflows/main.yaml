@@ -1,4 +1,4 @@
-name: My Checkov Demo Workflow version2
+name: My Checkov Demo Workflow version3
 on:
   push:
     branches:
